@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://saler05.github.io/appofficial-i-game-com-cn/sitemap.xml
