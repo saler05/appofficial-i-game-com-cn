@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>再一次，bet365 · 持续关注的站点</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f5f9fc;
+      color: #1e2a35;
+      line-height: 1.7;
+      padding: 1.25rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-wrap {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 2rem;
+      box-shadow: 0 8px 28px rgba(0, 45, 55, 0.07);
+      padding: 2rem 1.75rem 2.5rem;
+      transition: all 0.2s ease;
+    }
+
+    /* 开场区域 */
+    .opening-line {
+      font-size: 1.15rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      color: #2d5f6e;
+      border-left: 4px solid #2aa1af;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .opening-line span {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.95rem;
+      color: #4b7a85;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 500;
+      color: #134b58;
+      margin: 0 0 0.5rem 0;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #4d6d78;
+      margin-bottom: 2.2rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #d7e5ea;
+    }
+
+    /* 承接段落 */
+    .intro-text {
+      margin-bottom: 2rem;
+    }
+
+    .intro-text p {
+      margin-bottom: 1.2rem;
+    }
+
+    .intro-text a {
+      color: #1b7f8b;
+      text-decoration: none;
+      border-bottom: 1px solid #b3d4db;
+      font-weight: 500;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .intro-text a:hover {
+      border-bottom-color: #1b7f8b;
+      color: #0c4f59;
+    }
+
+    /* 网格卡片特点区 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 1rem;
+      margin: 2rem 0 2.2rem;
+    }
+
+    .feature-card {
+      background: #f0f7fa;
+      border-radius: 1.2rem;
+      padding: 1.2rem 1rem;
+      transition: background 0.2s, box-shadow 0.2s;
+      border: 1px solid #dcecf0;
+    }
+
+    .feature-card:hover {
+      background: #e6f2f5;
+      box-shadow: 0 4px 12px rgba(42, 161, 175, 0.08);
+    }
+
+    .feature-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1b5d68;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .feature-card h3::before {
+      content: "·";
+      color: #2aa1af;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1;
+      margin-right: 0.1rem;
+    }
+
+    .feature-card p {
+      font-size: 0.92rem;
+      color: #2e4f59;
+      line-height: 1.5;
+    }
+
+    /* 温和的叙述 / 再次访问理由 */
+    .reflection {
+      background: #f2f9fb;
+      padding: 1.4rem 1.5rem;
+      border-radius: 1.5rem;
+      margin: 1.8rem 0 2rem;
+      border-left: 4px solid #2aa1af;
+    }
+
+    .reflection p {
+      font-size: 0.98rem;
+      color: #1f4954;
+      margin-bottom: 0.65rem;
+    }
+
+    .reflection p:last-child {
+      margin-bottom: 0;
+    }
+
+    .reflection strong {
+      color: #116d7a;
+      font-weight: 600;
+    }
+
+    /* 提示 / 收藏小记 */
+    .note-box {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.2rem 0.5rem;
+      background: #ffffff;
+      border: 1px solid #d2e4e9;
+      border-radius: 2rem;
+      padding: 0.9rem 1.5rem;
+      margin: 1.5rem 0 1.8rem;
+      font-size: 0.95rem;
+      color: #1c5663;
+    }
+
+    .note-box span {
+      background: #e5f0f3;
+      padding: 0.1rem 0.7rem;
+      border-radius: 1rem;
+      font-size: 0.82rem;
+      color: #0f5a66;
+      white-space: nowrap;
+    }
+
+    /* FAQ摘要块（柔和、问句形式） */
+    .faq-mini {
+      margin: 2rem 0 1.2rem;
+      border-top: 1px solid #dae9ee;
+      padding-top: 1.5rem;
+    }
+
+    .faq-item {
+      padding: 0.5rem 0 0.7rem 0;
+      border-bottom: 1px dashed #d2e2e8;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #184d59;
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .faq-q::before {
+      content: "Q";
+      color: #2aa1af;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: #2b5b68;
+      margin-top: 0.2rem;
+      padding-left: 1.3rem;
+      line-height: 1.5;
+    }
+
+    .faq-a a {
+      color: #1b7f8b;
+      text-decoration: none;
+      border-bottom: 1px solid #b8d4db;
+    }
+
+    .faq-a a:hover {
+      border-bottom-color: #1b7f8b;
+    }
+
+    /* 结尾温柔提示 */
+    .closing-note {
+      margin-top: 2.2rem;
+      padding: 1rem 0 0.2rem;
+      text-align: center;
+      font-size: 0.92rem;
+      color: #4b717d;
+      border-top: 1px solid #d7e6eb;
+    }
+
+    .closing-note a {
+      color: #16727e;
+      text-decoration: none;
+      border-bottom: 1px solid #b6cfd6;
+      font-weight: 500;
+    }
+
+    .closing-note a:hover {
+      border-bottom-color: #16727e;
+    }
+
+    .closing-note small {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #6f8f99;
+    }
+
+    /* 移动端适配 */
+    @media (max-width: 540px) {
+      .page-wrap {
+        padding: 1.5rem 1.2rem 2rem;
+        border-radius: 1.5rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+      .feature-card {
+        padding: 1rem 0.9rem;
+      }
+      .reflection {
+        padding: 1rem 1.2rem;
+      }
+      .note-box {
+        padding: 0.7rem 1.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 1.5rem;
+      }
+      .opening-line {
+        font-size: 1rem;
+      }
+      .faq-a {
+        padding-left: 0.8rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .page-wrap {
+        padding: 1.2rem 0.9rem;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+  <!-- 开场短句 -->
+  <div class="opening-line">
+    有时，你会重新打开一个页面。<br>
+    <span>不是因为忘记，而是因为它值得再次被想起。</span>
+  </div>
+
+  <h1>再次回到这里 · bet365</h1>
+  <div class="subhead">收藏夹里安静的存在，以及持续关注的理由</div>
+
+  <!-- 承接段落: 从再次访问与收藏的角度 -->
+  <div class="intro-text">
+    <p>
+      书签列表里总有一些站点，你不一定每天打开，但每次回来都能看到熟悉的界面与未变的稳定。
+      <a href="https://chinese-bet365.com">bet365</a> 对我来说就是这样的位置——不是短暂的访问，而是反复回来之后依然觉得舒适的角落。
+    </p>
+    <p>
+      从最初偶然的发现，到后来习惯性地保留在标签页，它逐渐变成我浏览器里一个安静的存在。
+      不需要刻意记住，只要想找的时候，它就在那里。这种持续的、不喧哗的可靠感，也许正是很多使用者长久停留的缘由。
+    </p>
+  </div>
+
+  <!-- 特点列表（网格卡片） -->
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>界面整洁</h3>
+      <p>没有多余的弹窗或闪烁元素，信息层级清晰。无论使用什么设备，页面结构始终一致。</p>
+    </div>
+    <div class="feature-card">
+      <h3>响应及时</h3>
+      <p>操作跟手，加载平顺。在移动网络环境下也能保持基本的可用性，不拖沓。</p>
+    </div>
+    <div class="feature-card">
+      <h3>功能集中</h3>
+      <p>不做大而全的堆砌，而是围绕核心使用场景布置入口，减少选择负担。</p>
+    </div>
+    <div class="feature-card">
+      <h3>风格延续</h3>
+      <p>视觉语言内敛且统一，长期使用不会产生视觉疲劳，适合日常与偶尔使用。</p>
+    </div>
+  </div>
+
+  <!-- 温和叙述：再次访问、收藏的体验 -->
+  <div class="reflection">
+    <p>
+      <strong>收藏一个站点</strong>，有时不只是因为功能，还因为在需要时它总能提供一种熟悉的节奏。
+    </p>
+    <p>
+      我习惯把一些网站放在浏览器的「常用」文件夹里，<a href="https://chinese-bet365.com" style="color:#1b7f8b;border-bottom:1px solid #b3d4db;text-decoration:none;">bet365</a> 是其中之一。
+      每次回来，不需要重新适应，也不会感到陌生。这种连续的、渐进的使用体验，让一个工具逐渐变成日常的一部分。
+    </p>
+    <p>
+      持续关注，意味着你信任它会一直保持某种水准——不高调，但稳定。
+    </p>
+  </div>
+
+  <!-- 小提示块（收藏与默认动作） -->
+  <div class="note-box">
+    <span>💡 小记</span>
+    如果你习惯将常用站点保留在书签栏，不妨试试把链接加入收藏夹，方便随时回看。
+  </div>
+
+  <!-- FAQ 摘要：两个温和问句 -->
+  <div class="faq-mini">
+    <div class="faq-item">
+      <div class="faq-q">为什么值得反复回来？</div>
+      <div class="faq-a">持续一致的界面语言与稳定的响应速度，让每次访问都像上次一样自然。没有突发变化，也没有学习成本。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">适合什么样的使用频率？</div>
+      <div class="faq-a">无论是每天查看，还是隔周回来，体验变化不大。适合把它当作一个长期保留的页面。<a href="https://chinese-bet365.com">bet365</a> 本身设计就偏向这种低频但不疏远的节奏。</div>
+    </div>
+  </div>
+
+  <!-- 温和结尾 -->
+  <div class="closing-note">
+    希望这个页面也能成为你收藏夹里一个安静的存在。<br>
+    如果还没加入，也许现在就是合适的时机 —— 去 <a href="https://chinese-bet365.com">bet365</a> 看看吧。
+    <small>· 不打扰，常相见 ·</small>
+  </div>
+</div>
+</body>
+</html>
